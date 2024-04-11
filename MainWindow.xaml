@@ -9,7 +9,8 @@
     Title="MainWindow"
     Height="450"
     Width="800">
-    <Canvas>
+    <Canvas
+        Background="#FFCED8FF">
         <Label
             Content="First Name"
             Canvas.Left="109"
@@ -38,23 +39,72 @@
             x:Name="btnDisplayInformation"
             Content="Display Information"
             Canvas.Left="109"
-            Canvas.Top="230"
+            Canvas.Top="350"
             Height="38"
-            Width="232" 
+            Width="232"
             Click="btnDisplayInformation_Click"
-            />
-        
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+
         <!--Display the users full name after button is clicked
         1. Added a label
         2. Give our label a name
         3. In our .CS we are going to "wireup" our front end to our back end code
         -->
-        
+
         <Label
             x:Name="lblDisplayFullName"
             Content="Label"
             Canvas.Left="518"
             Canvas.Top="28" />
+
+        <!--Rich Text Box-->
+        <RichTextBox
+            Height="333"
+            Width="359"
+            Canvas.Left="390"
+            Canvas.Top="69"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+
+            <FlowDocument>
+                <!--Page of Paper-->
+                <Paragraph>
+                    <!--Paragraph of Text-->
+                    <!--We are going to NAME the run-->
+                    <Run
+                        x:Name="runDisplay"
+                        Text="RichTextBox" />
+                    <!--Single Sentence-->
+                </Paragraph>
+
+            </FlowDocument>
+
+        </RichTextBox>
+        
+        <!--RTB Address-->
+        <RichTextBox
+            Height="142"
+            Width="246"
+            Canvas.Left="102"
+            Canvas.Top="189"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <FlowDocument>
+                <Paragraph>
+                    <Run
+                        x:Name="runHomeInfo"
+                        Text="RichTextBox" />
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        
+        <Label
+            Content="Address"
+            Canvas.Left="110"
+            Canvas.Top="158"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
 
     </Canvas>
 </Window>

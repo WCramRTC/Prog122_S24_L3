@@ -31,15 +31,39 @@ namespace Prog122_S24_L3
                 // 1. Create string variables for our first and last name
                 string firstName = txtFirstName.Text;
                 string lastName = txtLastName.Text;
-
+                
                 // Testing to see if
-                int number = int.Parse(firstName) / int.Parse(lastName);
+                //int number = int.Parse(firstName) / int.Parse(lastName);
                 // 2. Concatenate them together to form a full name
                 // string interpolation
                 string fullName = $"{firstName} {lastName}";
 
+                // Rich Text Box
+
                 // 3. Display that information to our label
                 lblDisplayFullName.Content = fullName;
+
+                // 4. Display to the Rich Text Box
+                runDisplay.Text = fullName;
+
+                // x - Add a new Rich Text Box for getting an address
+                // x - Add a label for the Rich Text box
+                // x - Properly name the "Run" tag
+                // Write the code to grab the text from RTB
+                string address = runHomeInfo.Text;
+                // Display it to our original runDisplay
+
+                // Two line breaks
+                runDisplay.Text += "\n\n";
+
+                // Append the Address
+                runDisplay.Text += address;
+
+                // Full Name
+                // 
+                // Address
+
+
             }
             catch (FormatException fex)
             {
@@ -49,6 +73,7 @@ namespace Prog122_S24_L3
             {
                 MessageBox.Show("You cannot divide by zero");
             }
+
 
             // DivideByZero is for the homework
  
